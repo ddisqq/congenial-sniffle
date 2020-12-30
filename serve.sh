@@ -1,6 +1,7 @@
 
 npm install -g @angular/cli
 npm install -g @aws-amplify/cli
+npm install -g @aws-amplify/ui-angular
 npm i
 amplify pull --appId d2qedav01jvzfi --envName staging
 ng serve
