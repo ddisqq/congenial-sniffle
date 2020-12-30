@@ -12,13 +12,5 @@
       "providerPlugin": "awscloudformation",
       "type": "manual"
     }
-  },
-  "auth": {
-    "congenialsniffleb5d18242": {
-      "service": "Cognito",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "customAuth": false
-    }
   }
 }
