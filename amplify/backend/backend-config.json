@@ -1,11 +1,5 @@
 {
-  "function": {
-    "congenialsniffle8a9a5a55": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    }
-  },
+  "function": {},
   "hosting": {
     "amplifyhosting": {
       "service": "amplifyhosting",
