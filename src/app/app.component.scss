@@ -1,0 +1,30 @@
+// .grid-container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-template-rows: 1fr 1fr 1fr;
+//   gap: 0px 0px;
+//   grid-template-areas:
+//     "header-nav header-nav header-nav header-nav"
+//     "left-nav main-content main-content right-nav-top"
+//     "left-nav main-content main-content right-nav-bottom";
+// }
+
+// .main-content {
+//   grid-area: main-content;
+// }
+
+// .header-nav {
+//   grid-area: header-nav;
+// }
+
+// .left-nav {
+//   grid-area: left-nav;
+// }
+
+// .right-nav-top {
+//   grid-area: right-nav-top;
+// }
+
+// .right-nav-bottom {
+//   grid-area: right-nav-bottom;
+// }
