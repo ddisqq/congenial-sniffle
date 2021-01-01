@@ -2,9 +2,6 @@
 npm install -g @angular/cli
 npm install -g @aws-amplify/cli
 npm install -g @aws-amplify/ui-angular
-curl -sL https://aws-amplify.github.io/amplify-cli/install | bash && $SHELL
-amplify pull --appId d2qedav01jvzfi --envName dev
-amplify add function
 npm i
 amplify pull --appId d2qedav01jvzfi --envName staging
 ng serve
