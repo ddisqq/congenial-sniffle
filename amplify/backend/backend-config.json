@@ -1,5 +1,11 @@
 {
-  "function": {},
+  "function": {
+    "congenialsniffle0c9fe93f": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
   "hosting": {
     "amplifyhosting": {
       "service": "amplifyhosting",
@@ -7,7 +13,33 @@
       "type": "manual"
     }
   },
-  "auth": {},
-  "api": {},
-  "storage": {}
+  "auth": {
+    "cognito94cc948a": {
+      "service": "Cognito",
+      "serviceType": "managed",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "api": {
+    "apidcaf9ff8": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "congenialsniffle0c9fe93f",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ]
+    }
+  },
+  "storage": {
+    "s3603fb9d9": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  }
 }
