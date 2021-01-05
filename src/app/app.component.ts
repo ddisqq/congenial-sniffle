@@ -3,22 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { CoinbasePro } from 'coinbase-pro-node';
 
-const auth = {
-  apiKey:
-    'Dt3u26EB9u8NyWMJ2UF3DNn1oTCDhf2OuOhaXhZJyr/ZW4JNVPqoaTXgarSEa3L1dTn3+iinh1hJHBwsT7vIDQ==',
-  apiSecret: '71disque',
-  passphrase: '71disque',
-  // The Sandbox is for testing only and offers a subset of the products/assets:
-  // https://docs.pro.coinbase.com/#sandbox
-  useSandbox: true,
-};
-
-const client = new CoinbasePro(auth);
-
-client.rest.account.listAccounts().then((accounts) => {
-  const message = `You can trade "${accounts.length}" different pairs.`;
-  console.log(message);
-});
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -31,9 +15,25 @@ export class AppComponent implements OnInit {
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
-    console.log(client.rest);
-    console.log(client.url);
-    console.log(client.ws);
+    var auth = {
+      apiKey:
+        'Dt3u26EB9u8NyWMJ2UF3DNn1oTCDhf2OuOhaXhZJyr/ZW4JNVPqoaTXgarSEa3L1dTn3+iinh1hJHBwsT7vIDQ==',
+      apiSecret: '71disque',
+      passphrase: '71disque',
+      // The Sandbox is for testing only and offers a subset of the products/assets:
+      // https://docs.pro.coinbase.com/#sandbox
+      useSandbox: true,
+    };
+
+    // // var client = new CoinbasePro(auth);
+
+    // client.rest.account.listAccounts().then((accounts) => {
+    //   const message = `You can trade "${accounts.length}" different pairs.`;
+    //   console.log(message);
+    // });
+    // console.log(client.rest);
+    // console.log(client.url);
+    // console.log(client.ws);
     var apiUrl = 'https://api-public.sandbox.pro.coinbase.com';
     this.http
       .get<any>('https://api.npms.io/v2/search?q=scope:angular')
